@@ -65,6 +65,7 @@ CI/CD pipeline is designed to automate the entire build and deployment process e
 3. Ensure the repository has the necessary permissions for GitHub Actions to push to GHCR:
    - Go to Settings > Actions > General
    - Under "Workflow permissions", select "Read and write permissions"
+4. Make sure that nextjs-k8s-app\.github\workflows\docker-build-push.yml file is present in your repository before pushing the code in repo. GitHub Actions workflow file that automates the building and pushing of a Docker image to a container registry.
 
 ## Kubernetes Deployment with Minikube
 The application is fully configured for Kubernetes deployment, ensuring scalability, reliability, and efficient resource utilization. All Kubernetes manifests are organized within the k8s/ directory, including deployment.yaml, which defines how the application is deployed, and service.yaml, which exposes the application to external users. 
