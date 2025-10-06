@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nextjs-app
-        image: ghcr.io/GITHUB_USERNAME/nextjs-k8s-app:latest
+        image: ghcr.io/sudarshanj18/nextjs-deployment:sha-89cc54c
         imagePullPolicy: Always
         ports:
         - containerPort: 3000

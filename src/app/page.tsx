@@ -16,7 +16,6 @@ export default function Home() {
   const [name, setName] = useState('');
   const [purpose, setPurpose] = useState('');
   
-  // Load visitors from localStorage on component mount
   useEffect(() => {
     const savedVisitors = localStorage.getItem('visitors');
     if (savedVisitors) {
@@ -24,12 +23,10 @@ export default function Home() {
     }
   }, []);
 
-  // Save visitors to localStorage whenever it changes
   useEffect(() => {
     localStorage.setItem('visitors', JSON.stringify(visitors));
   }, [visitors]);
 
-  // Handle visitor entry
   const handleEntry = (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !purpose) return;
@@ -47,7 +44,6 @@ export default function Home() {
     setPurpose('');
   };
 
-  // Handle visitor exit
   const handleExit = (id: string) => {
     const updatedVisitors = visitors.map(visitor => 
       visitor.id === id 
